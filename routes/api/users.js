@@ -47,9 +47,7 @@ const User = require('../../models/User');
     });
 });
 
-router.get('/', (req, res)=>{
-    res.json('You are on User Page');
-})
+
 
 router.post('/login', (req,res) =>{
     //Form Validation
