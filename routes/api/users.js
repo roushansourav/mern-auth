@@ -11,12 +11,13 @@ const validateLoginInput = require('../../validation/login');
 //loading user model
 const User = require('../../models/User');
 
- router.post('/register', (req,res) =>{
+ router.post('/register', (req, res) =>{
     
     //Form validation    
     const { errors,isValid } = validateRegisterInput( req.body );
     //Check validation
-    
+    console.log(req.body);
+    console.log(isValid);
     if(!isValid){
         return res.status(400).json(errors);
     }

@@ -4,13 +4,18 @@ import './App.css';
 import Navbar from './components/layout/Navbar';
 import Landing from "./components/layout/Landing";
 import Register from './auth/Register';
-import Login from './auth/Login'
+import Login from './auth/Login';
+
+//Redux
+import { Provider } from 'react-redux';
+import store from './store';
 
 
 class  App extends Component{
 
   render(){ 
     return (
+      <Provider store={ store }>
       <Router>
           <div className="App">
           <Navbar />
@@ -20,7 +25,7 @@ class  App extends Component{
           
       </div>
       </Router>
-      
+      </Provider>
     );
   }
 }
